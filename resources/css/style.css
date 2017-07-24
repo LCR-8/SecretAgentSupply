@@ -103,6 +103,10 @@ nav a {
   text-decoration: none;
 }
 
+#menusmall {
+  display: none;
+}
+
 main {
   padding: 3rem 0rem 4rem 0rem;
 }
@@ -110,6 +114,9 @@ main {
 .products {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  height: 15.5rem;
+  overflow: hidden;
 }
 
 .product {
@@ -139,7 +146,8 @@ main {
 .details {
   display: flex;
   margin-top: 3rem;
-  justify-content: space-around;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .detail {
@@ -161,4 +169,62 @@ footer {
   width: 100%;
   background-color: black;
   color: white;
+}
+
+@media only screen and (max-width: 1024px){
+  .product {
+    width: 47%;
+  }
+
+  #menusmall {
+    display: flex;
+    justify-content: center;
+  }
+
+  #menularge {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 470px){
+  .container {
+    width: 440px;
+    justify-content: center;
+  }
+
+  .product {
+    width: 90%;
+  }
+
+  .detail {
+    width: 90%;
+    margin-top: 1.5rem;
+  }
+
+  .promobanner {
+    height: 15rem;
+    align-items: flex-start;
+    background-image: url('../images/moto.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .promo {
+    width: 100%;
+    background-color: black;
+    margin-top: 10rem;
+    font-size: 1rem;
+    padding: 0px;
+  }
+
+  .promo h3 {
+    padding-top: 1rem;
+    font-size: 0.77rem;
+  }
+
+  .promo h1 {
+    font-size: 1rem;
+  }
+
 }
